@@ -1,6 +1,7 @@
 @import "null";
 @import "fonts";
 
-body {
-	background-color: red;
+[class*="__container"] {
+    max-width: 1216px;
+    margin: 0 auto;
 }

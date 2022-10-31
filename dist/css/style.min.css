@@ -74,6 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
-body {
-  background-color: red;
+[class*=__container] {
+  max-width: 1216px;
+  margin: 0 auto;
 }
