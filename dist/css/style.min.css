@@ -78,3 +78,62 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 1216px;
   margin: 0 auto;
 }
+
+.header__row {
+  max-width: 1800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.header__logo {
+  margin-right: 264px;
+}
+.header__links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.header__item:not(:last-of-type) {
+  margin-right: 40px;
+}
+.header__link {
+  display: flex;
+  align-items: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 17px;
+  letter-spacing: -0.02em;
+  color: rgba(0, 0, 0, 0.8);
+}
+.header__address {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  margin-left: auto;
+  margin-right: 40px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 21px;
+  align-items: center;
+  text-align: right;
+  letter-spacing: -0.02em;
+  color: rgba(0, 0, 0, 0.8);
+}
+.header__contacts a {
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 21px;
+  align-items: center;
+  text-align: right;
+  letter-spacing: -0.02em;
+  color: #88C558;
+}
