@@ -5,13 +5,16 @@
     max-width: 1216px;
     margin: 0 auto;
     border: 1px solid rgb(255, 0, 0);
+    background-color: aqua;
 }
 .page { //общие блоки
     &_header {
+
     }
 }
 //--------------------HEADER------------------
 .header {
+    background-color: inherit; //прозрачный фон
     padding: 0px -60px; //отступы безопасности
     @media (max-width:992px){
         padding: 0px -20px; //отступы безопасности
@@ -28,13 +31,13 @@
         }
     }
     &__row:before{
+        display: none;
         content: '';
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 98px;
-        border: 1px solid rgb(66, 66, 66);
         z-index: 3;
         background-color: #fff;
         @media (max-width:992px){
@@ -52,15 +55,16 @@
         margin-right: auto;
         margin-left: auto;
         @media (max-width:992px){
+            display: none;
             position: fixed;
             flex-direction: column;
-            top: -100%;                //!убрал меню
+            top: 0;                //!убрал меню
             left: 0;
             width: 100%;
             height: 100%;
             align-items: center;
             justify-content: center;
-            background-color: white;
+            background-color:  #A7CC4A;
         }
     }
     &__item:not(:last-of-type) {
@@ -75,7 +79,7 @@
             margin-right: 0px;
         }
     }
-    
+//?------------------------Бургер----------------
     &__burger{
         display: block;
         @media (max-width:992px) {
@@ -96,6 +100,7 @@
             height: 2px;
             left: 0;
             top: 9px;
+            transition: all 0.3s ease 0s;
         }
     }
     &__burger:before,&__burger::after{
@@ -106,6 +111,7 @@
             width: 100%;
             height: 2px;
             left: 0;
+            transition: all 0.3s ease 0s;
         }
     }
     &__burger:before{
@@ -130,28 +136,29 @@
             font-size: 28px;
             line-height: 50px;
             letter-spacing: 2px;
+            color: rgb(46, 56, 33);
         }
     }
- //----------------------при нажатии на бургер-------------------
- //------------------когда появляется класс active---------------
+ //?----------------------при нажатии на бургер-------------------
+ //?------------------когда появляется класс active---------------
     &__burger.active:before { 
-        transform: rotate(45deg);
+        transform: rotate(45deg); //вращение псевдоэлемента
         top: 9px
     }
     &__burger.active:after { 
-        transform: rotate(-45deg);
+        transform: rotate(-45deg); //вращение псевдоэлемента
         bottom: 9px
     }
     &__burger.active span {
-        transform: scale(0); // скрываем элемент
+        transform: scale(0); // скрываем центральный элемент бургера
     }
-
-
-
-
-
-
-
+    &__links.active {
+        display: flex; // показать ссылки
+    }
+    &__row.active:before {
+        display: flex;
+    }
+    //?------------------------------остальной текст
     &__address{
         display: flex;
         flex-direction: column;
@@ -193,5 +200,4 @@
             display: none;
         }
     }
-    
 }
