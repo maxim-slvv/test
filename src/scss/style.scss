@@ -4,6 +4,7 @@
 [class*="__container"] {
     max-width: 1216px;
     margin: 0 auto;
+    border: 1px solid rgb(255, 0, 0);
 }
 .page { //общие блоки
     &_header {
@@ -11,24 +12,107 @@
 }
 //--------------------HEADER------------------
 .header {
+    padding: 0px -60px; //отступы безопасности
+    @media (max-width:992px){
+        padding: 0px -20px; //отступы безопасности
+    }
     &__row {
+        padding: 20px 60px; //отступы безопасности
         max-width: 1800px;
         margin: 0 auto;
         display: flex;
         flex-direction: row;
         align-items: center;
-        
+        @media (max-width:992px){
+            padding: 5px 20px;//отступы безопасности
+        }
     }
-    &__logo {
-        margin-right: 264px;
+    &__row:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 98px;
+        border: 1px solid rgb(66, 66, 66);
+        z-index: 3;
+        background-color: #fff;
+        @media (max-width:992px){
+            height: 58px;
+        }
+    }
+    &__logo { 
+        content: '';
+        position: relative;
+        z-index: 3;
     }
     &__links {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        margin-right: auto;
+        margin-left: auto;
+        @media (max-width:992px){
+            position: fixed;
+            flex-direction: column;
+            top: -100%;                //!убрал меню
+            left: 0;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+        }
     }
     &__item:not(:last-of-type) {
         margin-right: 40px;
+        @media (max-width:1070px) {
+            margin-right: 30px;
+        }
+        @media (max-width:1000px) {
+            margin-right: 20px;
+        }
+        @media (max-width:992px) {
+            margin-right: 0px;
+        }
+    }
+    
+    &__burger{
+        display: block;
+        @media (max-width:992px) {
+            display: block;
+            position: relative;
+            width: 30px;
+            height: 20px;
+            position: relative;
+            z-index: 3;
+            margin-left: auto;
+        }
+    }
+    &__burger span {
+        @media (max-width:992px) {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.8);
+            width: 100%;
+            height: 2px;
+            left: 0;
+            top: 9px;
+        }
+    }
+    &__burger:before,&__burger::after{
+        @media (max-width:992px) {
+            content: '';
+            background: rgba(0, 0, 0, 0.8);
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            left: 0;
+        }
+    }
+    &__burger:before{
+        top: 0;
+    }
+    &__burger:after{
+        bottom: 0;
     }
     &__link {
         display: flex;
@@ -40,35 +124,74 @@
         line-height: 17px;
         letter-spacing: -0.02em;
         color: rgba(0, 0, 0, 0.8);
+        position: relative;
+        z-index: 3;
+        @media (max-width:992px) {
+            font-size: 28px;
+            line-height: 50px;
+            letter-spacing: 2px;
+        }
     }
-    &__address {
+ //----------------------при нажатии на бургер-------------------
+ //------------------когда появляется класс active---------------
+    &__burger.active:before { 
+        transform: rotate(45deg);
+        top: 9px
+    }
+    &__burger.active:after { 
+        transform: rotate(-45deg);
+        bottom: 9px
+    }
+    &__burger.active span {
+        transform: scale(0); // скрываем элемент
+    }
+
+
+
+
+
+
+
+    &__address{
         display: flex;
         flex-direction: column;
-        flex: 0 0 auto;
-        margin-left: auto;
+        flex: 0 1 auto;
         margin-right: 40px;
+        font-size: 15px;
         font-family: 'Inter';
         font-style: normal;
-        font-weight: 400;
-        font-size: 15px;
+        font-weight: 500;
         line-height: 21px;
         align-items: center;
         text-align: right;
         letter-spacing: -0.02em;
         color: rgba(0, 0, 0, 0.8);
+        position: relative;
+        z-index: 3;
+        @media (max-width:1450px) {
+            display: none;
+        }
     }
     &__contacts a{
         display: flex;
         flex-direction: column;
         font-family: 'Inter';
         font-style: normal;
-        font-weight: 400;
+        font-weight: 500;
+        display: flex;
         font-size: 15px;
         line-height: 21px;
         align-items: center;
         text-align: right;
         letter-spacing: -0.02em;
         color: #88C558;
+        position: relative;
+        z-index: 3;
     }
+    &__contacts {
+        @media (max-width:1450px) {
+            display: none;
+        }
+    }
+    
 }
-
