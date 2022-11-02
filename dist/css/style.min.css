@@ -124,10 +124,10 @@ body {
   }
 }
 .header__row:before {
-  display: none;
   content: "";
   position: absolute;
   z-index: 3;
+  display: none;
   top: 0;
   right: -100%;
   width: 100%;
@@ -137,7 +137,6 @@ body {
 }
 @media (max-width: 992px) {
   .header__row:before {
-    display: block;
     height: 58px;
   }
 }
@@ -263,6 +262,7 @@ body {
   -webkit-transition: all 0.7s ease 0s;
 }
 .header__row.active:before {
+  display: block;
   right: 0;
   -webkit-transition: all 0s 0s;
 }
