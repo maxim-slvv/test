@@ -5,13 +5,14 @@
     max-width: 1220px;
     margin: 0 auto;
 }
+body{
+    background-color: #88C558; //! убрать
+}
 .page { //общие блоки
     &_header {
-
     }
     &_way {
         margin-top: 180px;
-       
     }
     &__title{
         font-family: 'Inter';
@@ -27,6 +28,9 @@
 }
 //!--------------------HEADER------------------
 .header {
+    content: '';
+    position: relative;
+    z-index: 3;
     background-color: inherit; //прозрачный фон
     padding: 0px -60px; //отступы безопасности
     @media (max-width:992px){
@@ -47,13 +51,15 @@
         display: none;
         content: '';
         position: absolute;
+        z-index: 3;
         top: 0;
-        left: 0;
+        right: -100%;
         width: 100%;
         height: 98px;
-        z-index: 3;
+        -webkit-transition: all 0.01s ease 0s;
         background-color: #fff;
         @media (max-width:992px){
+            display: block;
             height: 58px;
         }
     }
@@ -68,16 +74,16 @@
         margin-right: auto;
         margin-left: auto;
         @media (max-width:992px){
-            display: none;
             position: fixed;
             flex-direction: column;
             top: 0;
-            left: 0;
+            right: -100%;
             width: 100%;
             height: 100%;
             align-items: center;
             justify-content: center;
             background-color:  #A7CC4A;
+            -webkit-transition: all 0.2s ease 0s; 
         }
     }
     &__item:not(:last-of-type) {
@@ -156,20 +162,22 @@
  //?------------------когда появляется класс active---------------
     &__burger.active:before { 
         transform: rotate(45deg); //вращение псевдоэлемента
-        top: 9px
+        top: 9px;
     }
     &__burger.active:after { 
         transform: rotate(-45deg); //вращение псевдоэлемента
-        bottom: 9px
+        bottom: 9px;
     }
     &__burger.active span {
         transform: scale(0); // скрываем центральный элемент бургера
     }
     &__links.active {
-        display: flex; // показать ссылки
+        right: 0; // показать ссылки
+        -webkit-transition: all 0.7s ease 0s;
     }
     &__row.active:before {
-        display: flex;
+        right: 0;
+        -webkit-transition: all 0s  0s;
     }
     //?------------------------------остальной текст
     &__address{
@@ -214,7 +222,6 @@
         }
     }
 }
-
 //!------------------MAIN_WAY----------
 .way {
     &__title {
@@ -255,7 +262,6 @@
         margin-left: 5px;
         margin-right: 32px;
     }
-    
     &__text {
         h3 {
             font-family: 'Inter';
