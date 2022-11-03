@@ -288,8 +288,6 @@ body{
 }
 //!--------------------PRESENT----------------------
 .present {
-    
-   
     &__one {
         display: flex;
         align-items: center;
@@ -318,12 +316,8 @@ body{
         letter-spacing: -0.02em;
         color: rgba(0, 0, 0, 0.8);
     }
-    &__title p {
-
-    }
     &__subtitle {
         flex: 0 1 488px;
-        
     }
     &__two {
         display: flex;
@@ -334,7 +328,6 @@ body{
     }
     &__two>&__description, &__three>&__img{
         padding-right: 64px;
-
     }
     &__description {
        max-width: 660px;
