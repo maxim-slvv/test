@@ -5,6 +5,9 @@
     max-width: 1220px;
     margin: 0 auto;
     border: 1px solid red;
+    @media (max-width:1220px) {
+        padding: 10px;
+    }
 }
 body{
     // background-color: #88C558; //! убрать
@@ -35,6 +38,9 @@ body{
         }
         @media (max-width:490px) {
             font-size: 25px;
+        }
+        @media (max-width:320px) {
+            font-size: 20px;
         }
     }
     &_present {
