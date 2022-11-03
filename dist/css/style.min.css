@@ -77,7 +77,6 @@ h1, h2, h3, h4, h5, h6 {
 [class*=__container] {
   max-width: 1220px;
   margin: 0 auto;
-  border: 1px solid red;
 }
 @media (max-width: 1235px) {
   [class*=__container] {
@@ -90,7 +89,23 @@ body {
 }
 
 .page_way {
-  margin-top: 180px;
+  margin-top: 120px;
+}
+.page_present {
+  margin-top: 120px;
+}
+.page__about {
+  margin-top: 64px;
+}
+@media (max-width: 1220px) {
+  .page__about {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 890px) {
+  .page__about {
+    margin-top: 0px;
+  }
 }
 .page__title {
   font-style: normal;
@@ -124,15 +139,11 @@ body {
     font-size: 20px;
   }
 }
-.page_present {
-  margin-top: 120px;
-  margin-bottom: 180px;
-}
 
 .header {
   content: "";
   position: relative;
-  z-index: 3;
+  z-index: 10;
   background-color: inherit;
   padding: 0px -60px;
 }
@@ -157,7 +168,7 @@ body {
 .header__row:before {
   content: "";
   position: absolute;
-  z-index: 3;
+  z-index: 10;
   display: none;
   top: 0;
   right: -100%;
@@ -174,7 +185,7 @@ body {
 .header__logo {
   content: "";
   position: relative;
-  z-index: 3;
+  z-index: 10;
 }
 .header__links {
   display: flex;
@@ -192,7 +203,7 @@ body {
     height: 100%;
     align-items: center;
     justify-content: center;
-    background-color: #A7CC4A;
+    background-color: #95b642;
     -webkit-transition: all 0.2s ease 0s;
   }
 }
@@ -224,7 +235,7 @@ body {
     width: 30px;
     height: 20px;
     position: relative;
-    z-index: 3;
+    z-index: 10;
     margin-left: auto;
   }
 }
@@ -266,7 +277,7 @@ body {
   letter-spacing: -0.02em;
   color: rgba(0, 0, 0, 0.8);
   position: relative;
-  z-index: 3;
+  z-index: 10;
 }
 @media (max-width: 992px) {
   .header__link {
@@ -310,7 +321,7 @@ body {
   letter-spacing: -0.02em;
   color: rgba(0, 0, 0, 0.8);
   position: relative;
-  z-index: 3;
+  z-index: 10;
 }
 @media (max-width: 1450px) {
   .header__address {
@@ -330,7 +341,7 @@ body {
   letter-spacing: -0.02em;
   color: #88C558;
   position: relative;
-  z-index: 3;
+  z-index: 10;
 }
 @media (max-width: 1450px) {
   .header__contacts {
@@ -523,17 +534,38 @@ body {
     display: none;
   }
 }
+.present_background1 {
+  position: relative;
+}
 @media (max-width: 890px) {
   .present_background1 {
     background: url(../img/present/1.jpg) no-repeat;
     padding: 30px;
-    object-fit: cover;
   }
 }
 @media (max-width: 450px) {
   .present_background1 {
     padding: 15px;
   }
+}
+.present_background1::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  display: none;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(9, 110, 100, 0.8);
+}
+@media (max-width: 890px) {
+  .present_background1::after {
+    display: flex;
+  }
+}
+.present_background2 {
+  position: relative;
 }
 @media (max-width: 890px) {
   .present_background2 {
@@ -544,6 +576,52 @@ body {
 @media (max-width: 450px) {
   .present_background2 {
     padding: 15px;
+  }
+}
+.present_background2::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  display: none;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(9, 110, 100, 0.8);
+}
+@media (max-width: 890px) {
+  .present_background2::after {
+    display: flex;
+  }
+}
+.present_background3 {
+  position: relative;
+}
+@media (max-width: 890px) {
+  .present_background3 {
+    background: url(../img/about/background.png) no-repeat;
+    padding: 30px;
+  }
+}
+@media (max-width: 450px) {
+  .present_background3 {
+    padding: 15px;
+  }
+}
+.present_background3::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  display: none;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(9, 110, 100, 0.9);
+}
+@media (max-width: 890px) {
+  .present_background3::after {
+    display: flex;
   }
 }
 .present__one {
@@ -660,6 +738,8 @@ body {
 }
 .present__two {
   display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 60px;
 }
 @media (max-width: 1220px) {
@@ -694,6 +774,8 @@ body {
 }
 .present__three {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media (max-width: 890px) {
   .present__one, .present__two, .present__three {
@@ -706,13 +788,12 @@ body {
 }
 
 .description__titles {
-  color: #000000;
   display: flex;
   margin-bottom: 32px;
 }
 @media (max-width: 890px) {
   .description__titles {
-    color: rgb(223, 195, 35);
+    color: rgb(255, 255, 255);
   }
 }
 @media (max-width: 400px) {
@@ -728,6 +809,8 @@ body {
   line-height: 1.1;
   letter-spacing: -0.01em;
   padding-bottom: 16px;
+  position: relative;
+  z-index: 5;
 }
 @media (max-width: 1220px) {
   .description__title {
@@ -736,7 +819,7 @@ body {
 }
 @media (max-width: 890px) {
   .description__title {
-    color: rgb(223, 195, 35);
+    color: rgb(255, 255, 255);
   }
 }
 @media (max-width: 600px) {
@@ -756,6 +839,8 @@ body {
   line-height: 1;
   letter-spacing: -0.02em;
   margin-right: 20px;
+  position: relative;
+  z-index: 5;
 }
 @media (max-width: 1220px) {
   .description__number {
@@ -780,6 +865,8 @@ body {
   line-height: 110%;
   letter-spacing: -0.02em;
   max-width: 148px;
+  position: relative;
+  z-index: 5;
 }
 @media (max-width: 1220px) {
   .description__subtitle {
@@ -799,20 +886,56 @@ body {
   line-height: 1.6;
   letter-spacing: -0.01em;
   color: rgba(0, 0, 0, 0.8);
+  position: relative;
+  z-index: 5;
+  max-width: 500px;
 }
 @media (max-width: 1220px) {
   .description__text {
     font-size: 15px;
   }
 }
-@media (max-width: 1060px) {
-  .description__text {
-    font-size: 12px;
-  }
-}
 @media (max-width: 890px) {
   .description__text {
-    color: rgb(223, 195, 35);
+    font-size: 12px;
+    color: rgb(255, 255, 255);
     max-width: 500px;
+  }
+}
+
+.about__present {
+  align-items: center;
+  justify-content: center;
+}
+.about__description {
+  margin-right: 64px;
+}
+@media (max-width: 1220px) {
+  .about__description {
+    margin-right: 0px;
+  }
+}
+.about__text {
+  padding-right: 15px;
+  margin-top: 25px;
+}
+@media (max-width: 890px) {
+  .about__text {
+    padding-right: 0px;
+  }
+}
+@media (max-width: 400px) {
+  .about__text {
+    margin-top: 0px;
+  }
+}
+.about img {
+  max-width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+@media (max-width: 890px) {
+  .about img {
+    display: none;
   }
 }

@@ -4,7 +4,7 @@
 [class*="__container"] {
     max-width: 1220px;
     margin: 0 auto;
-    border: 1px solid red;
+    // border: 1px solid red;
     @media (max-width:1235px) {
         padding: 10px;
     }
@@ -17,7 +17,19 @@ body{
     &_header {
     }
     &_way {
-        margin-top: 180px;
+        margin-top: 120px;
+    }
+    &_present {
+        margin-top: 120px;
+    }
+    &__about{
+        margin-top: 64px;
+        @media (max-width:1220px) {
+            margin-top: 30px;
+        }
+        @media (max-width:890px) {
+            margin-top: 0px;
+        }
     }
     &__title{
         font-style: normal;
@@ -43,11 +55,7 @@ body{
             font-size: 20px;
         }
     }
-    &_present {
-        margin-top: 120px;
-        margin-bottom: 180px;
-
-    }
+    
 }
 //!--------------------HEADER------------------
 @import "header";
