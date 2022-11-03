@@ -94,8 +94,25 @@ body {
   line-height: 53px;
   display: flex;
   align-items: center;
+  justify-content: center;
   letter-spacing: -0.01em;
   color: #000000;
+  padding: 0 10px 0 10px;
+}
+@media (max-width: 1060px) {
+  .page__title {
+    font-size: 35px;
+  }
+}
+@media (max-width: 600px) {
+  .page__title {
+    font-size: 30px;
+  }
+}
+@media (max-width: 490px) {
+  .page__title {
+    font-size: 25px;
+  }
 }
 .page_present {
   margin-top: 120px;
@@ -311,9 +328,38 @@ body {
   }
 }
 
+@media (max-width: 1220px) {
+  .way__title {
+    margin-left: 20px;
+  }
+}
+@media (max-width: 1060px) {
+  .way__title {
+    margin-left: 0px;
+  }
+}
 .way__list {
   display: flex;
   flex-wrap: wrap;
+}
+@media (max-width: 1060px) {
+  .way__list {
+    flex-direction: row;
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+}
+@media (max-width: 690px) {
+  .way__list {
+    flex: 0 0 100%;
+    flex-direction: column;
+  }
+}
+@media (max-width: 600px) {
+  .way__list {
+    margin-left: 5px;
+    margin-top: 15px;
+  }
 }
 .way__item {
   display: flex;
@@ -322,15 +368,52 @@ body {
   justify-content: flex-start;
   flex: 0 0 50%;
   margin-top: 60px;
+  flex-wrap: nowrap;
 }
 .way__item span {
   display: flex;
 }
+@media (max-width: 1060px) {
+  .way__item {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 690px) {
+  .way__item {
+    flex: 0 0 100%;
+  }
+}
+@media (max-width: 690px) {
+  .way__item {
+    margin: 15px 0px 0px;
+    min-width: auto;
+  }
+}
 .way__item:nth-child(even) {
   padding-left: 80px;
 }
+@media (max-width: 1220px) {
+  .way__item:nth-child(even) {
+    padding-left: 0px;
+    padding-right: 30px;
+  }
+}
+@media (max-width: 1060px) {
+  .way__item:nth-child(even) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
 .way__item:nth-child(odd) {
   padding-left: 30px;
+}
+@media (max-width: 1060px) {
+  .way__item:nth-child(odd) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 .way__number, .way__number1 {
   font-style: italic;
@@ -341,9 +424,30 @@ body {
   color: rgba(0, 0, 0, 0.15);
   margin-right: 24px;
 }
+@media (max-width: 600px) {
+  .way__number, .way__number1 {
+    font-size: 50px;
+  }
+}
+@media (max-width: 490px) {
+  .way__number, .way__number1 {
+    font-size: 35px;
+  }
+}
 .way__number1 {
   margin-left: 5px;
   margin-right: 32px;
+}
+@media (max-width: 600px) {
+  .way__number1 {
+    font-size: 50px;
+    margin-right: 27px;
+  }
+}
+@media (max-width: 490px) {
+  .way__number1 {
+    font-size: 35px;
+  }
 }
 .way__text h2 {
   font-style: normal;
@@ -353,6 +457,16 @@ body {
   letter-spacing: -0.01em;
   justify-content: flex-start;
   color: #000000;
+}
+@media (max-width: 1060px) {
+  .way__text h2 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 490px) {
+  .way__text h2 {
+    font-size: 20px;
+  }
 }
 .way__text p {
   font-style: normal;
@@ -364,6 +478,18 @@ body {
   justify-content: flex-start;
   letter-spacing: -0.01em;
   color: rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 1060px) {
+  .way__text p {
+    font-size: 18px;
+    max-width: 200px;
+  }
+}
+@media (max-width: 1060px) {
+  .way__text p {
+    font-size: 15px;
+    max-width: 200px;
+  }
 }
 
 .present__one {
