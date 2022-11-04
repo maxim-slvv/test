@@ -14,8 +14,8 @@ body{
     font-family: 'Inter';
 }
 .page { //общие блоки
-    &_header {
-    }
+    // &_header {               //! убрать
+    // }
     &_way {
         margin-top: 120px;
     }
@@ -31,11 +31,14 @@ body{
             margin-top: 0px;
         }
     }
+    &__service {
+        margin-top: 120px;
+    }
     &__title{
         font-style: normal;
         font-weight: 700;
         font-size: 48px;
-        line-height: 53px;
+        line-height: 1.1;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -54,8 +57,29 @@ body{
         @media (max-width:320px) {
             font-size: 20px;
         }
+    }  
+}
+$z-index: 5;
+.all{
+    &_title{
+            font-style: normal;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 1.1;
+            letter-spacing: -0.01em;
+            padding-bottom: 16px;
+            position: relative;
+            z-index: $z-index;
+            @media (max-width:1220px) {
+                font-size: 40px;
+            }
+            @media (max-width:600px) {
+                font-size: 30px;
+            }
+            @media (max-width:400px) {
+                font-size: 25px;
+        }
     }
-    
 }
 //!--------------------HEADER------------------
 @import "header";
@@ -63,3 +87,5 @@ body{
 @import "way";
 //!--------------------PRESENT----------------------
 @import "present";
+//!--------------------SERVICE----------------------
+@import "service";
