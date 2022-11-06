@@ -1,7 +1,4 @@
 .service {
-    &__title {
-    }
-    
     &__cards {
         display: flex;
         flex-wrap: wrap;
@@ -28,9 +25,6 @@
     }
     &__card:last-of-type {
         padding: 0px 16px 0px;
-    }
-    
-    &__item {
     }
     &__img{
         width: 100%;
