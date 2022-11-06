@@ -106,7 +106,7 @@ body {
   }
 }
 .page_present {
-  margin-top: 64px;
+  margin-top: 90px;
 }
 .page__about {
   margin-top: 64px;
@@ -173,7 +173,7 @@ body {
 }
 @media (max-width: 890px) {
   .page__contacts {
-    padding: 20px 0px 15px;
+    padding: 0px 0px 15px;
   }
 }
 .page__title {
@@ -728,7 +728,7 @@ body {
 .present__one {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding-bottom: 0px;
 }
 .present__title {
@@ -819,12 +819,13 @@ body {
   }
 }
 .present__subtitle {
-  flex: 0 1 488px;
+  flex: 0 1 560px;
 }
 @media (max-width: 890px) {
   .present__subtitle {
     flex: 0 1 auto;
     max-width: 600px;
+    padding-bottom: 12px;
   }
 }
 @media (max-width: 640px) {

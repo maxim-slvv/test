@@ -87,7 +87,7 @@
     &__one {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         padding-bottom: 0px;
     }
     &__title {
@@ -154,10 +154,11 @@
         }
     }
     &__subtitle {
-        flex: 0 1 488px;
+        flex: 0 1 560px;
         @media (max-width:890px) {
             flex: 0 1 auto;
             max-width: 600px;
+            padding-bottom: 12px;
         }
         @media (max-width:640px) {
             max-width: auto;

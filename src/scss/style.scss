@@ -30,7 +30,7 @@ $margin3: 25px;
         }
     }
     &_present {
-        margin-top: $margin_full;
+        margin-top: 90px;
     }
     &__about{
         margin-top: $margin_full;
@@ -75,7 +75,7 @@ $margin3: 25px;
             padding: 30px 0px 25px;
         }
         @media (max-width:890px) {
-            padding: 20px 0px 15px;
+            padding: 0px 0px 15px;
         }
     }
     &__title{
