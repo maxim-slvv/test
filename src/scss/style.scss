@@ -94,3 +94,10 @@ $z-index: 5;
 @import "service";
 //!---------------------PROJECTS---------------------
 @import "projects";
+
+.wow {
+    &_mod{
+        animation-duration: 1s;
+        animation-delay: 0.2s;
+    }
+ }

@@ -1114,6 +1114,19 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    gap: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .projects__body {
+    font-size: 15px;
+    gap: 10px;
+  }
+}
+@media (max-width: 400px) {
+  .projects__body {
+    font-size: 12px;
+    gap: 5px;
   }
 }
 @media (max-width: 1280px) {
@@ -1169,4 +1182,9 @@ body {
   .mini {
     display: block;
   }
+}
+
+.wow_mod {
+  animation-duration: 1s;
+  animation-delay: 0.2s;
 }
