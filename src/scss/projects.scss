@@ -11,9 +11,6 @@
             flex-wrap: nowrap;
         }
     }
-    &__item:first-of-type{
-        flex: 0 0 100%;
-    }
     &__link {
     }
     &__img {
@@ -25,13 +22,11 @@
         @media (max-width:1280px) {
            max-height: 460px;
         }
-   
     }
     &__img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-     
     }
     &__name p, &__name span{
         display: inline-flex;
@@ -41,16 +36,25 @@
         letter-spacing: -0.01em;
         color: #000000;
         margin-right: 8px;
+        @media (max-width:600px) {
+            font-size: 15px;
+        }
+        @media (max-width:400px) {
+            font-size: 12px;
+        }
     }
     &__name span {
         color: rgba(0, 0, 0, 0.5);
     }
 }
-.page {
-    &__projects {
+.big{
+    @media (max-width:1280px) {
+        display: none;
     }
 }
-.all {
-    &_title {
+.mini{
+    display: none;
+    @media (max-width:1280px) {
+        display: block;
     }
 }

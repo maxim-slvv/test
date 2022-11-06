@@ -1116,9 +1116,6 @@ body {
     flex-wrap: nowrap;
   }
 }
-.projects__item:first-of-type {
-  flex: 0 0 100%;
-}
 @media (max-width: 1280px) {
   .projects__img {
     object-fit: cover;
@@ -1145,6 +1142,31 @@ body {
   color: #000000;
   margin-right: 8px;
 }
+@media (max-width: 600px) {
+  .projects__name p, .projects__name span {
+    font-size: 15px;
+  }
+}
+@media (max-width: 400px) {
+  .projects__name p, .projects__name span {
+    font-size: 12px;
+  }
+}
 .projects__name span {
   color: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 1280px) {
+  .big {
+    display: none;
+  }
+}
+
+.mini {
+  display: none;
+}
+@media (max-width: 1280px) {
+  .mini {
+    display: block;
+  }
 }
