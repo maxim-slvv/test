@@ -42,6 +42,11 @@
             visibility: hidden;
             opacity: 0;
         }
+        @media (min-width:200){  //!-----скрываю точки
+            display: none;
+            visibility: hidden;
+            opacity: 0;
+        }
     }
     &-dots li{
         margin: 0 20px; //расстояние между кнопками
