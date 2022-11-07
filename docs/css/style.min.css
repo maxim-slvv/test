@@ -495,6 +495,50 @@ body {
   }
 }
 
+.slider {
+  position: relative;
+}
+
+.slider h1 {
+  position: absolute;
+  bottom: 100px;
+  left: 60px;
+  padding: 20px;
+  z-index: 1;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 1.1;
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  background: rgba(0, 0, 0, 0.7);
+}
+@media (max-width: 1500px) {
+  .slider h1 {
+    bottom: 55px;
+    left: 25px;
+    padding: 10px;
+    font-size: 25px;
+  }
+}
+@media (max-width: 992px) {
+  .slider h1 {
+    bottom: 20px;
+    left: 18px;
+    padding: 8px;
+    font-size: 15px;
+  }
+}
+@media (max-width: 600px) {
+  .slider h1 {
+    bottom: 10px;
+    left: 10px;
+    padding: 5px;
+    font-size: 10px;
+  }
+}
+
 .slick-list {
   content: "";
   position: relative;
