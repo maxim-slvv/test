@@ -35,7 +35,6 @@
             display: flex;
         }
     }
-    
     &_background2 {
         position: relative;
         @media (max-width:890px) {
@@ -59,7 +58,7 @@
         @media (max-width:890px) {
             display: flex;
         }
-}
+    }
     &_background3 {
         position: relative;
         @media (max-width:890px) {
@@ -218,7 +217,6 @@
             max-width: 560px;
             align-items: center;
             margin: 0 auto;
-         
         }
         @media (max-width:620px) {
             margin-bottom: 15px;
@@ -238,10 +236,8 @@ $text_color_img: rgb(255, 255, 255); //цвет всего текста на к�
 $z-index: 5;
 .description {
     &__titles {
-     
         display: flex;
         margin-bottom: 32px;
-        
         @media (max-width:890px) {
             color: $text_color_img;
         }
@@ -332,7 +328,6 @@ $z-index: 5;
     &__present{
         align-items: center;
         justify-content: center;
- 
     }
     &__description{
         margin-right: 64px;
@@ -351,7 +346,6 @@ $z-index: 5;
         @media (max-width:400px) {
             margin-top: 0px;
         }
-        
     }
     img {
         max-width: 100%;

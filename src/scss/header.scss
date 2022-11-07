@@ -4,6 +4,7 @@
     z-index: 10;
     background-color: inherit; //прозрачный фон
     padding: 0px -60px; //отступы безопасности
+    height: 0;
     @media (max-width:992px){
         padding: 0px -20px; //отступы безопасности
     }
@@ -14,9 +15,13 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        max-height: 98px;
         background-color: rgba(0, 0, 0, 0.5);
-        @media (max-width:992px){
+        @media (max-width:1200px){
             padding: 5px 20px;//отступы безопасности
+        }
+        @media (max-width:600px){
+            padding: 0px 20px;//отступы безопасности
         }
     }
     &__row:before{
@@ -29,15 +34,22 @@
         width: 100%;
         height: 98px;
         -webkit-transition: all 0.01s ease 0s;
-        background-color: #fff;
+        background-color: rgb(41, 41, 41);
         @media (max-width:992px){
             height: 58px;
+        }
+        @media (max-width:600px){
+            height: 48px;
         }
     }
     &__logo { 
         content: '';
         position: relative;
         z-index: 10;
+    }
+    &__logo img { 
+        width: 100%;
+        height: 100%;
     }
     &__links {
         display: flex;
@@ -85,7 +97,7 @@
     &__burger span {
         @media (max-width:992px) {
             position: absolute;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(255, 255, 255, 1);
             width: 100%;
             height: 2px;
             left: 0;
@@ -96,7 +108,7 @@
     &__burger:before,&__burger::after{
         @media (max-width:992px) {
             content: '';
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(255, 255, 255, 1);
             position: absolute;
             width: 100%;
             height: 2px;
@@ -166,7 +178,7 @@
         color: rgba(255, 255, 255, 1);
         position: relative;
         z-index: 10;
-        @media (max-width:1450px) {
+        @media (max-width:1550px) {
             display: none;
         }
     }
@@ -186,7 +198,7 @@
         z-index: 10;
     }
     &__contacts {
-        @media (max-width:1450px) {
+        @media (max-width:1550px) {
             display: none;
         }
     }

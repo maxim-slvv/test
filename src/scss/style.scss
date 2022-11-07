@@ -19,7 +19,8 @@ body{
 $margin_full: 64px;
 $margin2: 32px;
 $margin3: 25px;
-
+$margin4: 10px;
+$margin5: -15px;
 .page { 
     &_slider {
         max-width: 1920px;
@@ -27,11 +28,14 @@ $margin3: 25px;
     }
     &_way {
         margin-top: $margin_full;
-        @media (max-width:1060px) {
-            margin-top: $margin2;
-        }
-        @media (max-width:850px) {
+        @media (max-width:1235px) {
             margin-top: $margin3;
+        }
+        @media (max-width:1060px) {
+            margin-top: $margin4;
+        }
+        @media (max-width:600px) {
+            margin-top: $margin5;
         }
     }
     &_present {
@@ -123,7 +127,6 @@ $margin3: 25px;
         }
     }  
 }
-$z-index: 5;
 .all{
     &_title{
             font-style: normal;
@@ -133,7 +136,7 @@ $z-index: 5;
             letter-spacing: -0.01em;
             padding-bottom: 16px;
             position: relative;
-            z-index: $z-index;
+            z-index: 5;
             @media (max-width:1220px) {
                 font-size: 40px;
             }
@@ -145,7 +148,6 @@ $z-index: 5;
         }
     }
 }
-
 //!--------------------HEADER------------------
 @import "header";
 //!------------------SlICK-SLIDER----------
@@ -167,6 +169,43 @@ $z-index: 5;
         animation-delay: 0.2s;
     }
  }
+ //эффект при наведении на ссылки в футере
+.link-btn {
+    display: inline-flex;
+    position: relative;
+    color: #FFF;
+    font-weight: bold;
+    text-transform: uppercase; 
+    font-family: 'Roboto', Тahoma, sans-serif;
+    background: inherit;
+    cursor: pointer; 
+    overflow: hidden;
+    z-index: 1;
+}
+.link-btn:hover,
+.link-btn:active,
+.link-btn:focus {
+    color: #FFF;
+}
+.link-btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -50px;
+    bottom: 0;
+    left: 0;
+    border-right: 50px solid transparent;
+    border-top: 50px solid #2d9f3c;
+    transition: transform 0.5s;
+    transform: translateX(-100%);
+    z-index: -1;
+}
+.link-btn:hover:before,
+.link-btn:active:before,
+.link-btn:focus:before {
+    transform: translateX(0);
+}
+
 //эффект при наведении на кнопоки
  .atuin-btn {
     display: inline-flex;
@@ -177,7 +216,6 @@ $z-index: 5;
     font-family: 'Roboto', Тahoma, sans-serif;
     background: #74c32f;
     cursor: pointer; 
-  
     overflow: hidden;
     z-index: 1;
 }
