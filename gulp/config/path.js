@@ -2,7 +2,7 @@
 import * as nodePath from 'path'; //подключаем модули
 const rootFolder = nodePath.basename(nodePath.resolve());
 
-const buildFolder = `./dist`; // папка с результатом
+const buildFolder = `./docs`; // папка с результатом
 const srcFolder = `./src`; // папка с исходниками
 
 export const path = {
