@@ -9,11 +9,12 @@
     }
     &__row {
         padding: 20px 60px; //отступы безопасности
-        max-width: 1800px;
+        max-width: 1920px;
         margin: 0 auto;
         display: flex;
         flex-direction: row;
         align-items: center;
+        background-color: rgba(0, 0, 0, 0.5);
         @media (max-width:992px){
             padding: 5px 20px;//отступы безопасности
         }
@@ -117,7 +118,7 @@
         font-size: 15px;
         line-height: 17px;
         letter-spacing: -0.02em;
-        color: rgba(0, 0, 0, 0.8);
+        color: rgba(255, 255, 255, 1);
         position: relative;
         z-index: 10;
         @media (max-width:992px) {
@@ -162,7 +163,7 @@
         align-items: center;
         text-align: right;
         letter-spacing: -0.02em;
-        color: rgba(0, 0, 0, 0.8);
+        color: rgba(255, 255, 255, 1);
         position: relative;
         z-index: 10;
         @media (max-width:1450px) {

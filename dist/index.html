@@ -6,8 +6,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<link href="https://fonts.googleapis.com/css?family=Inter:200,regular,500,700,800" rel="stylesheet" />
-	<link rel="stylesheet" href="./css/style.min.css">
-	<link rel="stylesheet" href="./files/wow.css">
+	
+	<link rel="stylesheet" type="text/css" href="./files/wow.css">
+	<link rel="stylesheet" type="text/css" href="./files/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="./files/slick/slick-theme.css"/>
+	<link rel="stylesheet" type="text/css" href="./css/style.min.css">
 	<title>CitySpace</title>     
 </head>
 
@@ -36,40 +39,51 @@
         </div>
 </header>
 		<main class="main page_header">
+			<div class="slider single-item page_slider">
+    <img src="./img/main_slider/slider1.jpg" alt="">
+    <img src="./img/main_slider/slider2.jpg" alt="">
+    <img src="./img/main_slider/slider1.jpg" alt="">
+    <img src="./img/main_slider/slider2.jpg" alt="">
+    <img src="./img/main_slider/slider2.jpg" alt="">
+</div>
+
+
+
+
+
 			<div class="main__container">
-				<img src="./img/main_slider/slider1.jpg" width="100%" height="100%" alt="">
-<section class="way page_way wow fadeIn wow_mod">
-    <h2 class="way__title page__title">Направления работы</h2>
-    <div class="way__list">
-        <div class="way__item wow wow_mod">
-           <span class="way__number way__number1 ">01</span>
-           <div class="way__text">
-                <h2>Строительство</h2>
-                <p>Строительная компания полного цикла</p>
-           </div>
-        </div>
-        <div class="way__item wow wow_mod">
-           <span class="way__number">02</span>
-           <div class="way__text">
-                <h2>Консалтинг</h2>
-                <p>Строительный консалтинг и мониторинг</p>
-           </div>
-        </div>
-        <div class="way__item wow wow_mod">
-           <span class="way__number">03</span>
-           <div class="way__text">
-                <h2>Проектирование</h2>
-                <p>Архитектурно-проектное бюро</p>
-           </div>
-        </div>
-        <div class="way__item wow wow_mod">
-           <span class="way__number">04</span>
-           <div class="way__text">
-                <h2>Обслуживание</h2>
-                <p>Эксплутационная компания CitySpace</p>
-           </div>
-        </div>
-    </div>
+				<section class="way page_way wow fadeIn wow_mod">
+   <h2 class="way__title page__title">Направления работы</h2>
+   <div class="way__list">
+      <div class="way__item wow wow_mod">
+         <span class="way__number way__number1 ">01</span>
+         <div class="way__text">
+               <h2>Строительство</h2>
+               <p>Строительная компания полного цикла</p>
+         </div>
+      </div>
+      <div class="way__item wow wow_mod">
+         <span class="way__number">02</span>
+         <div class="way__text">
+               <h2>Консалтинг</h2>
+               <p>Строительный консалтинг и мониторинг</p>
+         </div>
+      </div>
+      <div class="way__item wow wow_mod">
+         <span class="way__number">03</span>
+         <div class="way__text">
+               <h2>Проектирование</h2>
+               <p>Архитектурно-проектное бюро</p>
+         </div>
+      </div>
+      <div class="way__item wow wow_mod">
+         <span class="way__number">04</span>
+         <div class="way__text">
+               <h2>Обслуживание</h2>
+               <p>Эксплутационная компания CitySpace</p>
+         </div>
+      </div>
+   </div>
 </section>
 <section class="present page_present ">
    <div class="present__one wow fadeIn wow_mod">
@@ -329,8 +343,9 @@
 			</div>
 		</footer>
 		<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-		<script src="./files/script.js"></script>
+		<script src="./files/slick/slick.min.js"></script>
 		<script src="./files/wow.min.js"></script>
 		<script>new WOW().init();</script>
+		<script src="./files/script.js"></script>
 	</body>
 </html>

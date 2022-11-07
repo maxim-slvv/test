@@ -92,6 +92,10 @@ body {
   font-family: "Inter";
 }
 
+.page_slider {
+  max-width: 1920px;
+  margin: 0 auto;
+}
 .page_way {
   margin-top: 64px;
 }
@@ -107,6 +111,11 @@ body {
 }
 .page_present {
   margin-top: 90px;
+}
+@media (max-width: 1060px) {
+  .page_present {
+    margin-top: 32px;
+  }
 }
 .page__about {
   margin-top: 64px;
@@ -129,6 +138,16 @@ body {
 .page__service {
   margin-top: 64px;
 }
+@media (max-width: 1060px) {
+  .page__service {
+    margin-top: 32px;
+  }
+}
+@media (max-width: 850px) {
+  .page__service {
+    margin-top: 25px;
+  }
+}
 .page__projects {
   margin-top: 32px;
   margin-bottom: 64px;
@@ -136,6 +155,16 @@ body {
 @media (max-width: 1280px) {
   .page__projects {
     margin-bottom: 30px;
+  }
+}
+@media (max-width: 1280px) {
+  .page__projects {
+    padding: 0px 50px;
+  }
+}
+@media (max-width: 767.9px) {
+  .page__projects {
+    padding: 0px 0px;
   }
 }
 @media (max-width: 1060px) {
@@ -249,11 +278,12 @@ body {
 }
 .header__row {
   padding: 20px 60px;
-  max-width: 1800px;
+  max-width: 1920px;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 @media (max-width: 992px) {
   .header__row {
@@ -370,7 +400,7 @@ body {
   font-size: 15px;
   line-height: 17px;
   letter-spacing: -0.02em;
-  color: rgba(0, 0, 0, 0.8);
+  color: rgb(255, 255, 255);
   position: relative;
   z-index: 10;
 }
@@ -414,7 +444,7 @@ body {
   align-items: center;
   text-align: right;
   letter-spacing: -0.02em;
-  color: rgba(0, 0, 0, 0.8);
+  color: rgb(255, 255, 255);
   position: relative;
   z-index: 10;
 }
@@ -442,6 +472,45 @@ body {
   .header__contacts {
     display: none;
   }
+}
+
+.slider {
+  margin-top: -90px;
+}
+
+.slick-list {
+  content: "";
+  position: relative;
+  z-index: 0;
+}
+.slick-dots {
+  display: flex;
+  padding-left: 60px;
+  bottom: 40px;
+}
+.slick-dots li {
+  margin: 0 20px;
+}
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 50px;
+  height: 20px;
+  margin: 0 12px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+
+.slick-dots li button:before {
+  width: 50px;
+  height: 20px;
+  content: ""; /* <-- убераем символ content: '•' */
+  background-color: rgb(0, 0, 0);
+  opacity: 0.25;
 }
 
 @media (max-width: 1220px) {

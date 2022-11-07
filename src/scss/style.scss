@@ -14,12 +14,17 @@
 }
 body{
     font-family: 'Inter';
+
 }
 $margin_full: 64px;
 $margin2: 32px;
 $margin3: 25px;
 
 .page { 
+    &_slider {
+        max-width: 1920px;
+        margin: 0 auto;
+    }
     &_way {
         margin-top: $margin_full;
         @media (max-width:1060px) {
@@ -31,6 +36,9 @@ $margin3: 25px;
     }
     &_present {
         margin-top: 90px;
+        @media (max-width:1060px) {
+            margin-top: $margin2;
+        }
     }
     &__about{
         margin-top: $margin_full;
@@ -46,12 +54,24 @@ $margin3: 25px;
     }
     &__service {
         margin-top: $margin_full;
+        @media (max-width:1060px) {
+            margin-top: $margin2;
+        }
+        @media (max-width:850px) {
+            margin-top: $margin3;
+        }
     }
     &__projects{
         margin-top: 32px;
         margin-bottom: $margin_full;
         @media (max-width:1280px) {
             margin-bottom: 30px;
+        }
+        @media (max-width:1280px) {
+            padding: 0px 50px;
+        }
+        @media (max-width:767.9px) {
+            padding: 0px 0px;
         }
         @media (max-width:1060px) {
             margin-top: $margin2;
@@ -125,8 +145,11 @@ $z-index: 5;
         }
     }
 }
+
 //!--------------------HEADER------------------
 @import "header";
+//!------------------SlICK-SLIDER----------
+@import "slick-slider";
 //!------------------MAIN_WAY----------
 @import "way";
 //!--------------------PRESENT----------------------

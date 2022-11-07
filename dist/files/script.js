@@ -5,6 +5,27 @@ $(document).ready(function(){
     })
 });
 
+//слайдер
+$(document).ready(function(){
+    $('.single-item').slick({
+        infinite: true,
+        dots: true,
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 50000,
+        pauseOnHover: false,
+      });
+});
+
+// $('.slider').slick({
+//     infinite: true,
+//     dots: true,
+//     slidesToShow: 3,
+//     slidesToScroll: 1
+//   });
+
 // при наведении на пункты "направления деятельности" -
 // дает пункту анимацию
 var number = document.querySelectorAll('.way__item');
