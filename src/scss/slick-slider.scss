@@ -39,6 +39,8 @@
         }
         @media (max-width:992px){  //!-----скрываю точки
             display: none;
+            visibility: hidden;
+            opacity: 0;
         }
     }
     &-dots li{

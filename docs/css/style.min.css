@@ -514,6 +514,8 @@ body {
 @media (max-width: 992px) {
   .slick-dots {
     display: none;
+    visibility: hidden;
+    opacity: 0;
   }
 }
 .slick-dots li {
