@@ -17,7 +17,7 @@ $(document).ready(function(){
         autoplaySpeed: 5000,
         pauseOnHover: false,
       });
-}); 
+});  
  
 
 //при нажатии на ссылки в header делать плавный переход к разделу  //!----------------------
