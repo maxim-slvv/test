@@ -17,8 +17,14 @@ $(document).ready(function(){
         autoplaySpeed: 5000,
         pauseOnHover: false,
       });
-});
+}); 
+ 
 
+//при нажатии на ссылки в header делать плавный переход к разделу  //!----------------------
+let linkCollect = document.querySelectorAll('.header__links a')  
+console.log(linkCollect)
+
+  
 // при наведении на пункты "направления деятельности" -
 // дает пункту анимацию
 var number = document.querySelectorAll('.way__item');
@@ -41,3 +47,5 @@ let button = document.querySelector('.form__button');
 button.addEventListener('click', function(event){
     event.preventDefault();
 })
+
+
