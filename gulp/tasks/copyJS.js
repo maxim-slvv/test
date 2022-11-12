@@ -1,3 +1,12 @@
+export const copyJS = () => { //!---------------
+	return app.gulp.src(app.path.src.js) //.files
+		.pipe(app.gulp.dest(app.path.build.js)) //.files
+}
+
+
+
+
+
 // import webpack from "webpack-stream";
 
 // export const js = () => {

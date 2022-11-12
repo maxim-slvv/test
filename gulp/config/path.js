@@ -12,21 +12,25 @@ export const path = {
 		html: `${buildFolder}/`,
 		images: `${buildFolder}/img/`,
 		fonts: `${buildFolder}/fonts/`,
-		files: `${buildFolder}/files/`
+		// files: `${buildFolder}/js/`       //!---------------
+		// files: `${buildFolder}/files/` //!---------------
 	},
 	src: {
 		// js: `${srcFolder}/js/app.js`,
-		js: `${srcFolder}/js/**/*.js`,
 		images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
 		svg: `${srcFolder}/img/**/*.svg`,
 		scss: `${srcFolder}/scss/style.scss`,
+		css: `${srcFolder}/css/**/*.*`, //!---------------
+		js: `${srcFolder}/js/**/*.*`,   //!---------------
 		html: `${srcFolder}/*.html`, //.pug
-		files: `${srcFolder}/files/**/*.*`,
+		
+		// files: `${srcFolder}/files/**/*.*`, //!---------------
 		// svgicons: `${srcFolder}/svgicons/*.svg`,
 	},
 	watch: { //слежка
 		js: `${srcFolder}/js/**/*.js`,
 		scss: `${srcFolder}/scss/**/*.scss`,
+		css: `${srcFolder}/css/**/*.css`,  //!---------------
 		html: `${srcFolder}/**/*.html`, //.pug
 		images: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
 		files: `${srcFolder}/files/**/*.*`

@@ -19,13 +19,6 @@ $(document).ready(function(){
       });
 });
 
-// $('.slider').slick({
-//     infinite: true,
-//     dots: true,
-//     slidesToShow: 3,
-//     slidesToScroll: 1
-//   });
-
 // при наведении на пункты "направления деятельности" -
 // дает пункту анимацию
 var number = document.querySelectorAll('.way__item');

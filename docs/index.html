@@ -7,9 +7,9 @@
 	
 	<link href="https://fonts.googleapis.com/css?family=Inter:200,regular,500,700,800" rel="stylesheet" />
 	
-	<link rel="stylesheet" type="text/css" href="./files/wow.css">
-	<link rel="stylesheet" type="text/css" href="./files/slick/slick.css"/>
-	<link rel="stylesheet" type="text/css" href="./files/slick/slick-theme.css"/>
+	<link rel="stylesheet" type="text/css" href="./css/wow.css">
+	<link rel="stylesheet" type="text/css" href="./js/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="./js/slick/slick-theme.css"/>
 	<link rel="stylesheet" type="text/css" href="./css/style.min.css">
 	<title>CitySpace</title>     
 </head>
@@ -20,10 +20,10 @@
             <div class="header__logo"><img src="./img/logo.svg"></div>
             <div class="header__burger"><span></span></div>
             <ul class="header__links">
-                <li class="header__item"><a href="#" class="header__link link-btn">Контакты</a></li>
-                <li class="header__item"><a href="#" class="header__link link-btn">Партнерам</a></li>
-                <li class="header__item"><a href="#" class="header__link link-btn">Портфолио</a></li>
-                <li class="header__item"><a href="#" class="header__link link-btn">Услуги</a></li>
+                <li class="header__item"><a href="#contacts" class="header__link link-btn">Контакты</a></li>
+                <li class="header__item"><a href="#way" class="header__link link-btn">Партнерам</a></li>
+                <li class="header__item"><a href="#portfolio" class="header__link link-btn">Портфолио</a></li>
+                <li class="header__item"><a href="#services" class="header__link link-btn">Услуги</a></li>
                 <li class="header__item"><a href="#" class="header__link link-btn">Почему мы</a></li>
                 <li class="header__item"><a href="#" class="header__link link-btn">Награды</a></li>
                 <li class="header__item"><a href="#" class="header__link link-btn">Для прессы</a></li>
@@ -54,7 +54,7 @@
 
 
 			<div class="main__container">
-				<section class="way page_way wow fadeIn wow_mod">
+				<section id="way" class="way page_way wow fadeIn wow_mod">
    <h2 class="way__title page__title">Направления работы</h2>
    <div class="way__list">
       <div class="way__item wow wow_mod">
@@ -154,7 +154,7 @@
       </div>
    </div>
 </section>
-<section class="service page__service">
+<section id="services" class="service page__service">
    <div class="service__title all_title wow fadeIn wow_mod" >
       <h2>Услуги</h2>
    </div>
@@ -239,7 +239,7 @@
       </div>
    </div>
 </section>
-<section class="projects page__projects">
+<section id="portfolio" class="projects page__projects">
    <div class="projects__title all_title wow fadeIn wow_mod">
       <h3>Проекты</h3>
    </div>
@@ -310,7 +310,7 @@
 				<section class="contacts page__contacts">
     <div class="contacts__body">
         <div class="contacts__card">
-            <div class="contacts__title all_title">
+            <div id="contacts" class="contacts__title all_title">
                 <h3>Контакты</h3>
             </div>
             <div class="contacts__phone">
@@ -347,9 +347,9 @@
 			</div>
 		</footer>
 		<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-		<script src="./files/slick/slick.min.js"></script>
-		<script src="./files/wow.min.js"></script>
+		<script src="./js/slick/slick.min.js"></script>
+		<script src="./js/wow.min.js"></script>
 		<script>new WOW().init();</script>
-		<script src="./files/script.js"></script>
+		<script src="./js/script.js"></script>
 	</body>
 </html>
